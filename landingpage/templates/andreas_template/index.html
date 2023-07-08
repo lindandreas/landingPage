@@ -1,0 +1,304 @@
+{% extends 'andreas_template/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="{% static 'andreas_template/img/logo.png' %}" alt="Andreas">
+    <p>Andreas</p>
+  </a>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="1">
+            <img src="{% static 'andreas_template/img/kisspng-logo-product-design-brand-data-stannum-technologies-custom-solutions-real-result-5b7d98a63fbff1.8543939715349577342611.png' %}" alt="Andreas">
+            <p>AL</p>
+          </a>
+          <button class="header--cta cta">Contact Me</button>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            {% if name and email %}
+            <li><span>Home</span></li>
+            <li><span>Experience</span></li>
+            <li><span>Ability</span></li>
+            <li><span>About</span></li>
+            <li class="is-active"><span>Contact</span></li>
+            {% else %}
+            <li class="is-active"><span>Home</span></li>
+            <li><span>Experience</span></li>
+            <li><span>Ability</span></li>
+            <li><span>About</span></li>
+            <li><span>Contact</span></li>
+            {% endif %}
+          </ul>
+        </nav>
+          <div class="rectangle-1"></div>
+          <div class="rectangle-2"></div>
+          <div class="circle-1"></div>
+          <div class="circle-2"></div>
+          <div class="circle-3"></div>
+        <ul class="l-main-content main-content">
+          {% if name and email %}  
+          <li class="l-section section">
+          {% else %}
+          <li class="l-section section section--is-active">
+          {% endif %}
+            <div class="intro">
+              <div class="intro--banner">
+                <h1 class="typewriterdeveloper">Developer</h1>
+                <h1 class="typewriterandreas">Andreas</h1>
+                <h1 class="typewriterlind">Lind</h1>
+                <button class="cta">Download CV
+                  <span class="btn-background"></span>
+                </button>
+                <img src="{% static 'andreas_template/img/cloud-storage_1280_crop.png' %}" alt="Welcome">
+              </div>
+              <div class="intro--options">
+                <a>
+                  <h3>Cloud</h3>
+                  <p>+3 years of development and architecture in AWS.</p>
+                </a>
+                <a>
+                  <h3>Python</h3>
+                  <p>+5 years of scripting, coding<br>and testing in Python.</p>
+                </a>
+                <!--a href="#0">
+                  <h3>Gitlab &amp; Grafana</h3>
+                  <p>Setting up CI/CD piplines and monitoring Big Data.</p>
+                </a-->
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="experience">
+              <h2>Selected experience</h2>
+              <div class="experience--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-left">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="{% static 'andreas_template/img/sylog-dark.png' %}" alt="Victory">
+                      </div>
+                      <p class="slider--item-title">Sylog</p>
+                      <p class="slider--item-description">Tech lead for a team based in Romania, showing the way of moving a monolith python application to the cloud. The team delivered cost savings by moving a service that activates functionalities over the air.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-center">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="{% static 'andreas_template/img/scania-dark.png' %}" alt="Metiew and Smith">
+                      </div>
+                      <p class="slider--item-title">Scania Group</p>
+                      <p class="slider--item-description">AWS developer in a BEV project at Scania. Through the whole project a big focus for code quality has occurred such as code reviews and dependency injection in python.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="#0">
+                      <div class="slider--item-image">
+                        <img src="{% static 'andreas_template/img/yabs-dark.png' %}" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">YABS</p>
+                      <p class="slider--item-description">Mobile app developer for an education company. Responsible of maintaining the app for Android by adding support for Android 10 (API level 29), enabling launch activity associated with time sensitive notification in fullscreen, setting navigation- and status-bar to transparent. Another responsibility was the release of the mobile application for iOS using Xcode, App Store Connect and Apple Developer. </p>
+                    </a>
+                  </li>
+                </ul>
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                </div>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="ability">
+              <div class="ability--banner">
+                <h2>"Andreas is<br>a highly skilled<br>software engineer<br>with exceptional<br>problem-solving<br>abilities and a<br>strong work ethic"<br></h2>
+                <a>- Ella Pourmand, <br> &emsp; Unit Manager at YABS AB</a>
+                <img src="{% static 'andreas_template/img/artificial-intelligence-g37b694826_1280.png' %}" alt="Ability">
+              </div>
+              <div class="ability--options">
+                <a>
+                  <h3>Modularity</h3>
+                  <p>Breaking down the code into smaller and self-contained modules promotes reusability.</p>
+                </a>
+                <a>
+                  <h3>Testability</h3>
+                  <p>Good code quality includes writing testable code and having a robust test suite.</p>
+                </a>
+                <a>
+                  <h3>Maintainability</h3>
+                  <p>Involves adhering to minimizing code duplication, coding best practices and following design patterns.</p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--lockup">
+                <div class="modal">
+                  <div class="modal--information">
+                    <p>Hi,</p>
+                    <a>I am a passionate software developer with 
+                      5+ years of experience working in an agile 
+                      DevOps culture and automating the 
+                      maintenance of large-scale systems and 
+                      applications. My expertise in high 
+                      availability, scalable systems, monitoring 
+                      and security principles makes me well-
+                      equipped to meet the challenges of my 
+                      next chapter in future projects.
+                    </a>
+                    <a>My understanding in AWS together with a broad experience in python and software components such as infrastructure-, deployment -automation, cloud computing, Infrastructure as Code (IaC) using CDK and monitoring tools such as Grafana will make the future team deliver with confidence on the future.</a>
+                    <a>My background in software engineering and system administration, combined with my coding and scripting experience in multiple languages, allows me to bring a unique skill set to the table. </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          {% if name and email %}
+          <li class="l-section section section--is-active">
+          {% else %}
+          <li class="l-section section">
+          {% endif %}
+            <!-- checkout formspree.io for easy form setup -->
+            <div class="contact">
+              {% if name and email %}
+              <center>
+                <h2>{{help_contact}}</h2>
+                <p>I'll get back to you shortly..</p>
+              </center>
+              {% else %}
+              <h2>I'll help you with</h2>
+              <form class="contact-request" method="post">
+                {% csrf_token %}
+                <div class="contact-request--options">
+                  <span class="options-a">
+                    <input id="Python" name="Python" type="checkbox" value="Python">
+                    <label for="Python">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Python
+                    </label>
+                    <input id="C#" name="C#" type="checkbox" value="C#">
+                    <label for="C#">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      C#
+                    </label>
+                    <input id="Java" name="Java" type="checkbox" value="Java">
+                    <label for="Java">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Java
+                    </label>
+                  </span>
+                  <span class="options-b">
+                    <input id="AWS" name="AWS" type="checkbox" value="AWS">
+                    <label for="AWS">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      AWS
+                    </label>
+                    <input id="Docker" name="Docker" type="checkbox" value="Docker">
+                    <label for="Docker">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Docker
+                    </label>
+                    <input id="MySQL" name="MySQL" type="checkbox" value="MySQL">
+                    <label for="MySQL">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      MySQL
+                    </label>
+                  </span>
+                </div>
+                <div class="contact-request--information">
+                  <div class="information-name">
+                    <input id="name" name="name" type="text" spellcheck="false" required>
+                    <label for="name">Name</label>
+                  </div>
+                  <div class="information-email">
+                    <input id="email" name="email" type="email" spellcheck="false" required>
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="information-textarea">
+                  <textarea id="message"name="message" placeholder="Message"></textarea>
+                </div>
+                <input type="submit" value="Send Request">
+              </form>
+              {% endif %}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    {% if name and email %}
+    <li>Home</li>
+    <li>Experience</li>
+    <li>Ability</li>
+    <li>About</li>
+    <li class="is-active">Contact</li>
+    {% else %}
+    <li class="is-active">Home</li>
+    <li>Experience</li>
+    <li>Ability</li>
+    <li>About</li>
+    <li>Contact</li>
+    {% endif %}
+  </ul>
+</div>
+
+{% endblock %}
